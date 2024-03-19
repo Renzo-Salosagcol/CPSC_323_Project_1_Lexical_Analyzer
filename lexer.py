@@ -1,7 +1,7 @@
-KEYWORDS = ["while", "for", "cout", "return"]
-OPERATORS = ['+', '<', '>', '=']
-DOPERATORS = ["<=", ">=", "==", "<<"]
-SEPARATORS = ['"', '(', ')', '{', '}']
+KEYWORDS = ["while", "for", "cout", "return", "if", "else", "elif"]
+OPERATORS = ['+', '<', '>', '=', '-', '*', '/']
+DOPERATORS = ["<=", ">=", "==", "<<", "+=", "-=", "*=", "/="]
+SEPARATORS = ['"', '(', ')', '{', '}', '[', ']']
 BLANKSPACE = " \n\t"
 
 TT_INT = "INT"
