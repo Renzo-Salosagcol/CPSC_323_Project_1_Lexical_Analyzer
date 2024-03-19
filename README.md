@@ -1,4 +1,4 @@
-CPSC Project 1
+CPSC 323 Project 1
 
 The first project assignment is to write a lexical analyzer (Lexer).
 Lexical analysis is the process of reading the stream of characters making up the
