@@ -1,37 +1,30 @@
-CPSC 323 Project 1
+**CPSC 323 Project 1**
 
-The first project assignment is to write a lexical analyzer (Lexer).
-Lexical analysis is the process of reading the stream of characters making up the
-source code of a program and dividing the input into tokens.
-The Lexer:
+**Documentation:**
 
-Writing a procedure (Function) - lexer () that returns a token when it's required will
-be a key part of your assignment. Your lexer() function should return a record with
-two fields: one for the token and one for the token's actual "value" (lexeme), or the
-instance of a token.
+**FSADesign.docx**
+This file contains a diagram of the FSA design that was used to acquire the acceptable states.
+Also contains the regular expressions that contains samples of expressions that would lead to acceptable
+states in our FSA Design
 
-Write a lexer from scratch by designing and implementing your FSA that returns
-the tokens from the simple source code in C/C++/Java/Python in the given file
-“input_scode.txt”.
+**input_sourcecode.txt**
+This file contains the code that will be examined by the python source code.
+Code can be changed and would output their appropriate tokens and lexemes
+in th output file.
 
-1. You need to design and implement FSA for tokens - identifier and integer, the
-rest can be written ad-hoc. Otherwise, there will be a deduction of 3 points!
+**main.py**
+Main portion of the python source code that will read the input code and produce
+two columns, tokens and lexemes, into the output file
 
-2. You need to write your REs and draw the FSA for the above required tokens:
-identifier and integer and put them in a document named as “FSA _mydesign.doc”.
+**lexer.py**
+Supporting code that contains the class "Lexer" that will assist the main source code
+in identifying the proper tokens and lexemes taken from input_sourcecode.txt
 
-3. Your executable program, which is supposed to be developed in
-C/C++/Java/Python, should represent the implementation of your idea. To read and
-return the subsequent token, use the lexer() method.
+**output.txt**
+Output file where the resulting tokens and lexemes determined by the main source code will
+be written into two separate columns, tokens and lexemes.
 
-4. Print out the result into two columns, one for tokens and another for lexemes,
-and save it into a document named as “output” (see an example I/O as below).
-
-5. You must write a “readme” file to briefly specify documentation & how to
-setup/run your program if needed.
-
-6. Your submission must have Five (5) files: the given “input_scode.txt”, your
-design file, your program file, output file, and a readme file.
-Your program should read a file containing the source code of input_scode.txt to
-generate tokens and write out the results to an output file. Make sure that you print
-both the tokens, and lexemes.
+**How to Run Program:**
+1. Insert code that you want to analyze into input_sourcecode.txt file
+2. Run the program
+3. Check output.txt file or terminal to identify the results of the analyzed code
