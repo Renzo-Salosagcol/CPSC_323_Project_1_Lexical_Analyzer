@@ -1,7 +1,7 @@
 KEYWORDS = ["while", "for", "cout", "return", "if", "else", "elif"]
 OPERATORS = ['+', '<', '>', '=', '-', '*', '/']
 DOPERATORS = ["<=", ">=", "==", "<<", "+=", "-=", "*=", "/="]
-SEPARATORS = ['"', '(', ')', '{', '}', '[', ']']
+SEPARATORS = ['"', '(', ')', '{', '}', '[', ']', ';']
 BLANKSPACE = " \n\t"
 
 TT_INT = "INT"
