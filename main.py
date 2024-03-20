@@ -27,8 +27,12 @@ def main():
     new_result = {}
     lines = text.splitlines()
 
-    print("Token    Lexeme")
+
     with open("output.txt", 'w') as output_file:
+        padding = 10
+        print(f"Token{" " * padding}Lexeme")
+        output_file.write(f"Token{" " * padding}Lexeme\n")
+
         for line in lines:
             lexer = Lexer(line)
             tokens = lexer.make_tokens()
@@ -36,9 +40,10 @@ def main():
             for token in tokens:
                 values = [token.value]
                 add_all_dict(new_result, token.type, values)
-                print(f"{token.type}    {token.value}")
+                padding = 15 - len(token.type)
 
-                output_file.write(f"{token.type}    {token.value}\n")
+                print(f"{token.type}{" " * padding}{token.value}")
+                output_file.write(f"{token.type}{" " * padding}{token.value}\n")
 
     remove_dup(new_result)
 
