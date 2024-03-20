@@ -27,27 +27,32 @@ def main():
     new_result = {}
     lines = text.splitlines()
 
-    for line in lines:
-        lexer = Lexer(line)
-        tokens = lexer.make_tokens()
+    print("Token    Lexeme")
+    with open("output.txt", 'w') as output_file:
+        for line in lines:
+            lexer = Lexer(line)
+            tokens = lexer.make_tokens()
 
-        for token in tokens:
-            values = [token.value]
-            add_all_dict(new_result, token.type, values)
+            for token in tokens:
+                values = [token.value]
+                add_all_dict(new_result, token.type, values)
+                print(f"{token.type}    {token.value}")
+
+                output_file.write(f"{token.type}    {token.value}\n")
 
     remove_dup(new_result)
 
     # Print table
-    print("Token    Lexeme")
-    for key, values in new_result.items():
-        for value in values:
-            print(f"{key}    {value}")
+    # print("Token    Lexeme")
+    # for key, values in new_result.items():
+    #     for value in values:
+    #         print(f"{key}    {value}")
 
     # Write to output file
-    with open("output.txt", 'w') as output_file:
-        for key, values in new_result.items():
-            for value in values:
-                output_file.write(f"{key}    {value}\n")
+    # with open("output.txt", 'w') as output_file:
+    #     for key, values in new_result.items():
+    #         for value in values:
+    #             output_file.write(f"{key}    {value}\n")
 
 if __name__ == "__main__":
     main()

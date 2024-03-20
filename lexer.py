@@ -10,7 +10,7 @@ TT_OPERATOR = "OPERATOR"
 TT_QUOTE = "SEPARATOR"
 TT_LPAREN = "SEPARATOR"
 TT_RPAREN = "SEPARATOR"
-TT_SEMICOL = "PUNCTUATION"
+TT_SEMICOL = "SEPARATOR"
 TT_EXCLAIM = "PUNCTUATION"
 TT_OCBRAC = "SEPARATOR"
 TT_CCBRAC = "SEPARATOR"
@@ -87,6 +87,9 @@ class Lexer:
                 self.advance()
             elif self.current_char == ')':
                 tokens.append(Token(TT_RPAREN, ')'))
+                self.advance()
+            elif self.current_char == '(':
+                tokens.append(Token(TT_LPAREN, '('))
                 self.advance()
             elif self.current_char == ';':
                 tokens.append(Token(TT_SEMICOL, ';'))
